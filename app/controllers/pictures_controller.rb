@@ -3,7 +3,8 @@ class PicturesController < ApplicationController
 
   # GET /pictures or /pictures.json
   def index
-    @pictures = Picture.all
+    @pictures = Picture.where(user_id: current_user.id).where.not(image: nil)
+    @user = current_user
   end
 
   # GET /pictures/1 or /pictures/1.json
@@ -22,9 +23,10 @@ class PicturesController < ApplicationController
   # POST /pictures or /pictures.json
   def create
     @picture = current_user.pictures.build(picture_params)
-
+    @user = current_user
     respond_to do |format|
       if @picture.save
+        UserMailer.user_mail(@user,@picture).deliver
         format.html { redirect_to picture_url(@picture), notice: "Picture was successfully created." }
         format.json { render :show, status: :created, location: @picture }
       else
