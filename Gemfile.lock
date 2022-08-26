@@ -139,7 +139,7 @@ GEM
     mini_magick (4.11.0)
     mini_mime (1.1.2)
     minitest (5.16.3)
-    msgpack (1.5.4)
+    msgpack (1.5.6)
     nio4r (2.5.8)
     nokogiri (1.11.7-x86_64-linux)
       racc (~> 1.4)
@@ -151,7 +151,7 @@ GEM
     pry-rails (0.3.9)
       pry (>= 0.10.4)
     public_suffix (5.0.0)
-    puma (5.6.4)
+    puma (5.6.5)
       nio4r (~> 2.0)
     racc (1.6.0)
     rack (2.2.4)
@@ -282,6 +282,5 @@ DEPENDENCIES
   webdrivers
   webpacker (~> 5.0)
 
-
 BUNDLED WITH
-   2.3.16
+   2.2.33
