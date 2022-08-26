@@ -18,6 +18,7 @@ class UsersController < ApplicationController
   def show
       @user = User.find(params[:id])
       @pictures = Picture.where(user_id: current_user.id).where.not(image: nil)
+      
   end
 
   def edit
@@ -26,9 +27,9 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    @user.update(image: params[:image])
-    
+
     respond_to do |format|
+      
         if @user.update(user_params)
           format.html { redirect_to user_url(@user), notice: "Picture was successfully updated." }
           format.json { render :show, status: :ok, location: @user }

@@ -1,21 +1,28 @@
-<h1>Sign Up</h1>
+<h1>編集画面</h1>
 
 <%= form_with(model:@user,local:true, url: user_path) do |f| %>
 
-<%= f.label :name %>
+<%= f.label :name %><br>
 <%= f.text_field :name %>
-
-<%= f.label :email %>
+<br>
+<%= f.label :email %><br>
 <%= f.email_field :email %>
+<br>
+<%= f.label :password %><br>
+<%= f.password_field :password %>
+<br>
+<%= f.label :password_confirmation %><br>
+<%= f.password_field :password_confirmation %>
 
-
-  
+<br>
 <%= f.label :image %>
 <%= image_tag(@user.image.url) if @user.image && @user.image.url %>
 <%= f.file_field :image %>
 <%= f.hidden_field :image_cache %>
-  
 
-<%= f.submit "Create my account" %>
+
+<br>
+<br>
+<%= f.submit "編集する" %>
 
 <% end %>
