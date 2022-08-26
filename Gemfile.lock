@@ -32,7 +32,7 @@ GEM
       activerecord (= 6.1.6.1)
       activestorage (= 6.1.6.1)
       activesupport (= 6.1.6.1)
-      nokogiri (>= 1.11.7)
+      nokogiri (>= 1.8.5)
     actionview (6.1.6.1)
       activesupport (= 6.1.6.1)
       builder (~> 3.1)
@@ -267,6 +267,7 @@ DEPENDENCIES
   listen (~> 3.3)
   mimemagic (= 0.3.7)
   mini_magick
+  nokogiri (>= 1.11.7)
   pg (~> 1.1)
   pry-rails
   puma (~> 5.0)
