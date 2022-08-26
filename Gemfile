@@ -15,7 +15,7 @@ gem 'nokogiri', '>= 1.11.7'
 
 gem 'carrierwave'
 gem 'mini_magick'
-gem 'mimemagic', '0.3.7'
+gem 'mimemagic', '0.3.9'
 gem 'bcrypt'
 gem 'rexml'
 gem 'bootstrap', '~> 4.4.1'
