@@ -17,6 +17,8 @@ gem 'mini_magick'
 gem 'mimemagic', '0.3.7'
 gem 'bcrypt'
 gem 'rexml'
+gem 'bootstrap', '~> 4.4.1'
+gem 'jquery-rails'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
