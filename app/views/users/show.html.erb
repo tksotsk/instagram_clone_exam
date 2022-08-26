@@ -1,7 +1,7 @@
 <h1><%= @user.name %>のページ</h1>
 <h2>メールアドレス：<%= @user.email %></h2>
 
-<p><%= image_tag @user.image.url, size: "200x100" if @user.image.present? %></p>
+<p><%= image_tag @user.image.url, size: "600x300" if @user.image.present? %></p>
 <h2><%= link_to 'New Picture', edit_user_path %></h2>
 <br>
 <br>
