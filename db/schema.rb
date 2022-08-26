@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_08_23_022235) do
+ActiveRecord::Schema.define(version: 2022_08_25_084036) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "favorites", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "picture_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["picture_id"], name: "index_favorites_on_picture_id"
+    t.index ["user_id"], name: "index_favorites_on_user_id"
+  end
 
   create_table "pictures", force: :cascade do |t|
     t.string "title"
@@ -31,6 +40,7 @@ ActiveRecord::Schema.define(version: 2022_08_23_022235) do
     t.string "password_digest"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "image"
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 

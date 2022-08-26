@@ -8,7 +8,7 @@ ja:
           has_one: "%{record}が存在しているので削除できません"
           has_many: "%{record}が存在しているので削除できません"
     models:
-      picture: ブログ
+      picture: 画像
       user: ユーザー
     attributes:
       picture:
@@ -16,13 +16,13 @@ ja:
         image: 画像
         content: 内容
       user:
-        title: タイトル
         name: 名前
         email: メールアドレス
         current_password: 現在のパスワード
         password: パスワード
         password_confirmation: 確認用パスワード
         remember_me: ログインを記憶
+      
   date:
     abbr_day_names:
     - 日
@@ -227,3 +227,16 @@ ja:
       Logout: ログアウト
       Signin: サインイン
       Login: ログイン
+  pictures:
+    index:
+      User: 投稿者
+      Title: タイトル
+      Image: 画像
+      Content: 内容
+      Show: 詳細
+      Edit: 編集
+      Destroy: 削除
+      New Picture: 新しい画像を投稿する
+    new:
+      New Picture: 画像投稿
+      Back: 戻る
