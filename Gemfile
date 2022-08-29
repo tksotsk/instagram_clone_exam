@@ -21,6 +21,10 @@ gem 'rexml'
 gem 'bootstrap', '~> 4.4.1'
 gem 'jquery-rails'
 
+gem 'net-imap'
+gem 'net-pop'
+gem 'net-smtp'
+
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'pry-rails'
