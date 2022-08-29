@@ -16,7 +16,7 @@
   <tbody>
     <% @pictures.each do |picture| %>
       <tr>
-        <td><%= picture.user.name %></td>
+        <td><%= picture.user.name %>さん</td>
         <td><%= picture.title %></td>
         <td><%= image_tag picture.image.url, size: "200x100" %></td>
         <td><%= picture.content %></td>
