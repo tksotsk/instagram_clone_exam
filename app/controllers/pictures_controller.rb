@@ -22,7 +22,7 @@ class PicturesController < ApplicationController
     @user = current_user
     respond_to do |format|
       if @picture.save
-        UserMailer.user_mail(@user,@picture).deliver
+        # UserMailer.user_mail(@user,@picture).deliver
         format.html { redirect_to picture_url(@picture), notice: "Picture was successfully created." }
         format.json { render :show, status: :created, location: @picture }
       else
